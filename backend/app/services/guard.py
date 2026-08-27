@@ -7,7 +7,7 @@ TECH_KEYWORDS = [
     'skills', 'react', 'node', 'express', 'mongodb', 'mern', 'javascript',
     'python', 'ai', 'rag', 'langchain', 'langgraph', 'llm', 'groq', 'huggingface',
     'java', 'aws', 'cloud', 'github', 'linkedin', 'contact', 'hire', 'work',
-    'achievement', 'strength', 'weakness', 'goal', 'interview', 'cgc', 'landran',
+    'achievement', 'strength', 'weakness', 'weakeness', 'goal', 'interview', 'cgc', 'landran',
     'hello', 'hi', 'hey', 'who', 'what', 'why', 'how'
 ]
 
