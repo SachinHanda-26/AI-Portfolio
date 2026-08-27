@@ -1,4 +1,8 @@
 import os
+import torch
+# Limit threads to reduce memory usage on Render's 512MB free tier
+torch.set_num_threads(1)
+
 from sentence_transformers import SentenceTransformer
 
 # Initialize the model once
