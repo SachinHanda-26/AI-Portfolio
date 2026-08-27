@@ -3,7 +3,7 @@ from typing import Optional
 
 class Settings(BaseSettings):
     GROQ_API_KEY: str
-    GROQ_MODEL: str = "llama3-8b-8192"
+    GROQ_MODEL: str = "llama-3.1-8b-instant"
     MONGODB_URI: str
     HF_API_TOKEN: Optional[str] = None # No longer strictly required since we use local sentence-transformers, but good to keep if available
     CLIENT_URL: str = "http://localhost:5173" # For CORS
