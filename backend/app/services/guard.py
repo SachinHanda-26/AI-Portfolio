@@ -9,7 +9,8 @@ TECH_KEYWORDS = [
     'java', 'aws', 'cloud', 'github', 'linkedin', 'contact', 'hire', 'work',
     'achievement', 'strength', 'weakness', 'weakeness', 'goal', 'interview', 'cgc', 'landran',
     'hello', 'hi', 'hey', 'who', 'what', 'why', 'how', 'ok', 'okay',
-    'good', 'great', 'thanks', 'thank', 'awesome', 'nice', 'cool', 'perfect'
+    'good', 'great', 'thanks', 'thank', 'awesome', 'nice', 'cool', 'perfect',
+    'nothing', 'no', 'nope', 'none', 'bye', 'goodbye', 'quit', 'exit'
 ]
 
 def is_query_relevant(query: str) -> bool:
