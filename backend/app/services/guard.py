@@ -8,6 +8,7 @@ TECH_KEYWORDS = [
     'python', 'ai', 'rag', 'langchain', 'langgraph', 'llm', 'groq', 'huggingface',
     'java', 'aws', 'cloud', 'github', 'linkedin', 'contact', 'hire', 'work',
     'achievement', 'strength', 'weakness', 'weakeness', 'goal', 'interview', 'cgc', 'landran',
+    'job', 'full-time', 'fulltime', 'part-time', 'internship', 'intern', 'organization', 'company',
     'hello', 'hi', 'hey', 'who', 'what', 'why', 'how', 'ok', 'okay',
     'good', 'great', 'thanks', 'thank', 'awesome', 'nice', 'cool', 'perfect',
     'nothing', 'no', 'nope', 'none', 'bye', 'goodbye', 'quit', 'exit'
