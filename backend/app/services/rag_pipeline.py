@@ -72,7 +72,7 @@ def format_sources(chunks: list[dict]) -> list[dict]:
             }
     return list(sources_map.values())
 
-async def run_rag_pipeline(query: str):
+async def run_rag_pipeline(query: str, history: list[dict] = None):
     """
     Executes the full RAG pipeline.
     Yields (stream, sources_list) where stream is an async generator of string chunks.
@@ -91,9 +91,17 @@ async def run_rag_pipeline(query: str):
     context_text = "\\n\\n".join([f"--- Context Segment ---\\n{c['content']}" for c in chunks])
     
     messages = [
-        {"role": "system", "content": SYSTEM_PROMPT},
-        {"role": "user", "content": f"Context information is below.\\n---------------------\\n{context_text}\\n---------------------\\nGiven the context information and not prior knowledge, answer the query.\\nQuery: {query}\\nAnswer:"}
+        {"role": "system", "content": SYSTEM_PROMPT}
     ]
+    
+    if history:
+        for msg in history:
+            messages.append({"role": msg.get("role", "user"), "content": msg.get("content", "")})
+            
+    messages.append({
+        "role": "user", 
+        "content": f"Context information is below.\n---------------------\n{context_text}\n---------------------\nGiven the context information and not prior knowledge, answer the query.\nQuery: {query}\nAnswer:"
+    })
     
     # 4. Stream LLM
     stream = stream_groq_completion(messages)

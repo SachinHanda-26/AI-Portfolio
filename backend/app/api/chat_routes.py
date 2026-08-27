@@ -15,7 +15,16 @@ async def ask_question(request: Request, body: ChatRequest):
     
     async def sse_generator():
         try:
-            stream, sources = await run_rag_pipeline(body.message)
+            history = []
+            try:
+                db = await get_db()
+                convo = await db.conversations.find_one({"sessionId": sid})
+                if convo and "messages" in convo:
+                    history = convo["messages"][-6:] # Keep last 6 messages
+            except Exception as e:
+                print(f"[DB] History fetch failed: {e}")
+                
+            stream, sources = await run_rag_pipeline(body.message, history)
             
             # Send sources first
             yield {
