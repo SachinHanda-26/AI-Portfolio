@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+/* ============================================
+   DESIGN SYSTEM — Sachin Handa AI Portfolio
+   Dark-first, premium, AI/tech-inspired
+   ============================================ */
+
+/* --- Custom Theme (Tailwind v4 CSS-first config) --- */
+@theme {
+  /* Brand Colors — Cool blue-violet palette */
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+
+  /* Surface Colors — Dark mode surfaces */
+  --color-surface-900: #0a0a0f;
+  --color-surface-800: #0f0f1a;
+  --color-surface-700: #161625;
+  --color-surface-600: #1e1e30;
+  --color-surface-500: #2a2a40;
+
+  /* Accent — Cyan glow for AI/tech feel */
+  --color-accent-400: #22d3ee;
+  --color-accent-500: #06b6d4;
+  --color-accent-600: #0891b2;
+
+  /* Text */
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+
+  /* Fonts */
+  --font-sans: 'Inter', 'system-ui', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Spacing scale extension */
+  --spacing-18: 4.5rem;
+  --spacing-88: 22rem;
+  --spacing-128: 32rem;
+}
+
+/* --- Global Base Styles --- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-surface-900);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.7;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-surface-800);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-surface-500);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-brand-500);
+  }
+
+  /* Selection color */
+  ::selection {
+    background-color: var(--color-brand-600);
+    color: white;
+  }
+}
+
+/* --- Utility Classes --- */
+@layer utilities {
+  /* Glassmorphism */
+  .glass {
+    background: rgba(15, 15, 26, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(99, 102, 241, 0.1);
+  }
+
+  .glass-card {
+    background: rgba(22, 22, 37, 0.6);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(99, 102, 241, 0.08);
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, var(--color-brand-400), var(--color-accent-400));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glow effects */
+  .glow-brand {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.15),
+                0 0 60px rgba(99, 102, 241, 0.05);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.15),
+                0 0 60px rgba(6, 182, 212, 0.05);
+  }
+
+  /* Section container */
+  .section-container {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  /* Dot pattern background */
+  .dot-pattern {
+    background-image: radial-gradient(
+      rgba(99, 102, 241, 0.08) 1px,
+      transparent 1px
+    );
+    background-size: 24px 24px;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(99, 102, 241, 0.2);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(99, 102, 241, 0.4);
+  }
+}

@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pymongo
+motor
+groq
+sentence-transformers
+python-dotenv
+sse-starlette
+pydantic
+pydantic-settings
+
