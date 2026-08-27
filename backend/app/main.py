@@ -8,7 +8,7 @@ app = FastAPI(title="Sachin AI Portfolio API", version="1.0.0")
 # Allow CORS for development frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[settings.CLIENT_URL, "http://localhost:5173", "http://localhost:5174"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
