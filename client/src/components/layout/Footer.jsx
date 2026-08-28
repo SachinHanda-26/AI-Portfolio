@@ -32,7 +32,7 @@ export default function Footer() {
               <GithubIcon size={20} />
             </a>
             <a
-              href={`https://${personalInfo.linkedin}`}
+              href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 text-text-muted hover:text-text-primary hover:bg-surface-600/50 

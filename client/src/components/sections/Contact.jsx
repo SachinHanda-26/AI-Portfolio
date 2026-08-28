@@ -36,7 +36,7 @@ export default function Contact() {
     {
       Icon: LinkedinIcon,
       label: 'LinkedIn',
-      href: `https://${personalInfo.linkedin}`,
+      href: personalInfo.linkedin,
     },
   ];
 
