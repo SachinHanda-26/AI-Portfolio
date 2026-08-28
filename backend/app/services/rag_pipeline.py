@@ -15,7 +15,7 @@ CRITICAL RULES:
 5. FIRST PERSON: Always speak in the first person ("I am...", "My projects...") as if you are Sachin.
 """
 
-async def retrieve_context(query: str, top_k: int = 15) -> list[dict]:
+async def retrieve_context(query: str, top_k: int = 30) -> list[dict]:
     """
     Embed the query and retrieve relevant chunks from MongoDB Atlas Vector Search.
     """
